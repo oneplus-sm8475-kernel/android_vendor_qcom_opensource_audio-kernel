@@ -338,5 +338,38 @@ LOCAL_MODULE_PATH         := $(KERNEL_MODULES_OUT)
 include $(DLKM_DIR)/Build_external_kernelmodule.mk
 ###########################################################
 
+########################### TFA98xx-v6 CODEC  ###########################
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES           := $(AUDIO_SRC_FILES)
+LOCAL_MODULE              := tfa98xx-v6_dlkm.ko
+LOCAL_MODULE_KBUILD_NAME  := asoc/codecs/tfa98xx-v6/tfa98xx-v6_dlkm.ko
+LOCAL_MODULE_TAGS         := optional
+LOCAL_MODULE_DEBUG_ENABLE := true
+LOCAL_MODULE_PATH         := $(KERNEL_MODULES_OUT)
+include $(DLKM_DIR)/Build_external_kernelmodule.mk
+###########################################################
+
+########################### SIA9175 CODEC  ###########################
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES           := $(AUDIO_SRC_FILES)
+LOCAL_MODULE              := sia9175_dlkm.ko
+LOCAL_MODULE_KBUILD_NAME  := asoc/codecs/sia9175/sia9175_dlkm.ko
+LOCAL_MODULE_TAGS         := optional
+LOCAL_MODULE_DEBUG_ENABLE := true
+LOCAL_MODULE_PATH         := $(KERNEL_MODULES_OUT)
+include $(DLKM_DIR)/Build_external_kernelmodule.mk
+###########################################################
+
+########################### Audio extend driver  ###########################
+include $(CLEAR_VARS)
+LOCAL_SRC_FILES           := $(AUDIO_SRC_FILES)
+LOCAL_MODULE              := audio_extend_dlkm.ko
+LOCAL_MODULE_KBUILD_NAME  := asoc/audio_extend_dlkm.ko
+LOCAL_MODULE_TAGS         := optional
+LOCAL_MODULE_DEBUG_ENABLE := true
+LOCAL_MODULE_PATH         := $(KERNEL_MODULES_OUT)
+include $(DLKM_DIR)/Build_external_kernelmodule.mk
+###########################################################
+
 endif # DLKM check
 endif # supported target check

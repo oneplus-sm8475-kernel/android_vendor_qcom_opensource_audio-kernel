@@ -43,7 +43,10 @@ BOARD_VENDOR_KERNEL_MODULES += $(KERNEL_MODULES_OUT)/q6_notifier_dlkm.ko\
 	$(KERNEL_MODULES_OUT)/wcd938x_slave_dlkm.ko \
 	$(KERNEL_MODULES_OUT)/wcd937x_dlkm.ko \
 	$(KERNEL_MODULES_OUT)/wcd937x_slave_dlkm.ko \
-	$(KERNEL_MODULES_OUT)/hdmi_dlkm.ko
+	$(KERNEL_MODULES_OUT)/hdmi_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/tfa98xx-v6_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/sia9175_dlkm.ko \
+	$(KERNEL_MODULES_OUT)/audio_extend_dlkm.ko
 endif
 endif
 endif

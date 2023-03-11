@@ -196,6 +196,10 @@ ifdef CONFIG_SND_SOC_SDX
 	MACHINE_OBJS += sdx-target.o
 endif
 
+ifdef CONFIG_AUDIO_EXTEND_DRV
+AUDIO_EXTEND_OBJS += audio_extend_drv.o
+endif
+
 LINUX_INC +=	-Iinclude/linux
 
 INCS +=		$(COMMON_INC) \
@@ -270,6 +274,9 @@ machine_dlkm-y := $(MACHINE_OBJS)
 
 obj-$(CONFIG_SND_SOC_SDX) += machine_dlkm.o
 machine_dlkm-y := $(MACHINE_OBJS)
+
+obj-$(CONFIG_AUDIO_EXTEND_DRV) += audio_extend_dlkm.o
+audio_extend_dlkm-y := $(AUDIO_EXTEND_OBJS)
 
 # inject some build related information
 DEFINES += -DBUILD_TIMESTAMP=\"$(shell date -u +'%Y-%m-%dT%H:%M:%SZ')\"
